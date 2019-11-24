@@ -1,13 +1,19 @@
 package dzq;
 
+import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class Student {
     //是不是相当于数据源
     private int age;
 
     private String name;
+
+    public Student(){
+
+    }
 
     public Student(int age,String name) {
         this.age = age;
@@ -41,4 +47,9 @@ public class Student {
 //    public String functionName(Function<String, String> function) {
 //        return function.apply(this.name);
 //    }
+
+    public <T> T supplierTest(Supplier<T> supplier, BiFunction<T, String, T> biFunction) {
+        return biFunction.apply(supplier.get(), this.name);
+    }
+
 }
