@@ -1,9 +1,6 @@
 package dzq;
 
-import java.util.function.BiFunction;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 public class Student {
     //是不是相当于数据源
@@ -52,4 +49,27 @@ public class Student {
         return biFunction.apply(supplier.get(), this.name);
     }
 
+    public void soutAge(int age){
+        System.out.println(age);
+    }
+
+    public int methodReferenceTest(Function<String,Integer> function) {
+        return function.apply(this.name);
+    }
+    public String methodReferenceTest1(BiFunction<String,String,String> biFunction) {
+        return biFunction.apply(this.name, this.name);
+    }
+
+
+    public boolean methodReferenceTest2(BiPredicate<String,String> predicate) {
+        return predicate.test(this.name, this.name);
+    }
+
+    public Student methodReferenceTest3(BiFunction<Integer, String, Student> biFunction) {
+        return biFunction.apply(this.age + 1, this.name + "methodReferenceTest3");
+    }
+
+    public void methodReferenceTest4(BiConsumer<Integer, String> biConsumer) {
+        biConsumer.accept(this.age + 1, this.name + "methodReferenceTest3");
+    }
 }

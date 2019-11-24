@@ -17,6 +17,8 @@ public class FunInterface_08 {
 
         Supplier<List<String>> supplier2 = () -> new ArrayList<>();
 
+        Supplier<List<String>> supplier3 = ArrayList::new;
+
         List<String> nameList = new Student(20, "zhangsan").supplierTest(() -> new ArrayList<>(),
                 (list, name) -> {
                     list.add(name);
