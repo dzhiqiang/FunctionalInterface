@@ -1,4 +1,4 @@
-package dzq;
+package dzq.functionalinterface;
 
 import java.util.function.*;
 

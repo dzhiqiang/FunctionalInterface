@@ -1,4 +1,4 @@
-package dzq;
+package dzq.functionalinterface;
 
 public class FunInterface_03 {
 

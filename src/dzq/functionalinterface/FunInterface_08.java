@@ -1,4 +1,4 @@
-package dzq;
+package dzq.functionalinterface;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,7 +9,7 @@ public class FunInterface_08 {
 
     public static void main(String[] args) {
 
-        Supplier<String> supplier = () -> "dzq";
+        Supplier<String> supplier = () -> "dzq/functionalinterface";
 
         System.out.println(supplier.get());
 

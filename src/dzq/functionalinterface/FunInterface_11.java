@@ -1,14 +1,12 @@
-package dzq;
+package dzq.functionalinterface;
 
 import java.util.Optional;
-import java.util.function.BinaryOperator;
-import java.util.function.Function;
 
 public class FunInterface_11 {
 
     public static void main(String[] args) {
 
-        Optional<String> optional = Optional.of("dzq");
+        Optional<String> optional = Optional.of("dzq/functionalinterface");
 
         System.out.println(optional.get());
 
