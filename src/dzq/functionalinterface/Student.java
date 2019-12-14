@@ -72,4 +72,12 @@ public class Student {
     public void methodReferenceTest4(BiConsumer<Integer, String> biConsumer) {
         biConsumer.accept(this.age + 1, this.name + "methodReferenceTest3");
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "age=" + age +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

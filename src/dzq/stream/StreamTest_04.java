@@ -76,6 +76,8 @@ public class StreamTest_04{
         System.out.println("-----------------");
         list.stream().sorted((o1,o2) -> o1.length() - o2.length()).forEach(System.out::println);
 
+
+
     }
 
 
