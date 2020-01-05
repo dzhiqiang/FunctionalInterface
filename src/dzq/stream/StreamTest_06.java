@@ -21,6 +21,8 @@ public class StreamTest_06 {
 
         stringList.forEach(System.out::println);
 
+
+
     }
 
 
